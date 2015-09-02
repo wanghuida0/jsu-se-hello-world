@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 2.8.5 (Jython 2.5.3 on java1.8.0_31)" generated="20150901 21:09:24.276">
+<suite source="C:\Users\Tom\Desktop\jsu-se-hello-world\acceptance\HelloWorldTests.txt" name="HelloWorldTests" id="s1">
+<test name="Say Hello" id="s1-t1">
+<kw type="kw" name="HelloWorldKeywords.Greet Everyone">
+<doc></doc>
+<arguments>
+</arguments>
+<status endtime="20150901 21:09:24.731" starttime="20150901 21:09:24.728" status="PASS"></status>
+</kw>
+<doc></doc>
+<tags>
+</tags>
+<status critical="yes" endtime="20150901 21:09:24.732" starttime="20150901 21:09:24.724" status="PASS"></status>
+</test>
+<test name="Say Hello In Pig Latin" id="s1-t2">
+<kw type="kw" name="HelloWorldKeywords.Reverse Greet Everyone">
+<doc></doc>
+<arguments>
+</arguments>
+<status endtime="20150901 21:09:24.739" starttime="20150901 21:09:24.737" status="PASS"></status>
+</kw>
+<doc></doc>
+<tags>
+</tags>
+<status critical="yes" endtime="20150901 21:09:24.740" starttime="20150901 21:09:24.735" status="PASS"></status>
+</test>
+<test name="Make Sure You're Saying Hello" id="s1-t3">
+<kw type="kw" name="${result} = HelloWorldKeywords.Greet Everyone">
+<doc></doc>
+<arguments>
+</arguments>
+<msg level="INFO" timestamp="20150901 21:09:24.748">${result} = hello world</msg>
+<status endtime="20150901 21:09:24.746" starttime="20150901 21:09:24.744" status="PASS"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Should Be Equal">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${result}</arg>
+<arg>hello world</arg>
+</arguments>
+<msg level="INFO" timestamp="20150901 21:09:24.753">Argument types are:
+&lt;type 'unicode'&gt;
+&lt;type 'unicode'&gt;</msg>
+<status endtime="20150901 21:09:24.754" starttime="20150901 21:09:24.749" status="PASS"></status>
+</kw>
+<doc></doc>
+<tags>
+</tags>
+<status critical="yes" endtime="20150901 21:09:24.755" starttime="20150901 21:09:24.742" status="PASS"></status>
+</test>
+<test name="Make A Test That Fails" id="s1-t4">
+<kw type="kw" name="${result} = HelloWorldKeywords.Reverse Greet Everyone">
+<doc></doc>
+<arguments>
+</arguments>
+<msg level="INFO" timestamp="20150901 21:09:24.763">${result} = dlrow olleh</msg>
+<status endtime="20150901 21:09:24.762" starttime="20150901 21:09:24.760" status="PASS"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Should Be Equal">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${result}</arg>
+<arg>hello world</arg>
+</arguments>
+<msg level="INFO" timestamp="20150901 21:09:24.767">Argument types are:
+&lt;type 'unicode'&gt;
+&lt;type 'unicode'&gt;</msg>
+<msg level="FAIL" timestamp="20150901 21:09:24.776">dlrow olleh != hello world</msg>
+<status endtime="20150901 21:09:24.777" starttime="20150901 21:09:24.764" status="FAIL"></status>
+</kw>
+<doc></doc>
+<tags>
+</tags>
+<status critical="yes" endtime="20150901 21:09:24.778" starttime="20150901 21:09:24.757" status="FAIL">dlrow olleh != hello world</status>
+</test>
+<doc></doc>
+<metadata>
+</metadata>
+<status endtime="20150901 21:09:24.784" starttime="20150901 21:09:24.280" status="FAIL"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="1">Critical Tests</stat>
+<stat pass="3" fail="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="3" fail="1" name="HelloWorldTests" id="s1">HelloWorldTests</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
